@@ -9,6 +9,7 @@ import "hash/adler32"
 import "crypto/rand"
 
 
+// Tests by writing up to 4k of data into the checksum
 func TestEquivalence(t *testing.T) {
 	testarr := make([]byte, 4*1024);
 	sum := 0
@@ -34,6 +35,7 @@ func TestEquivalence(t *testing.T) {
 	}
 }
 
+// Writes up to 4MB of random data into the rolling checksum
 func TestEquivalenceLong(t *testing.T) {
 	testarr := make([]byte, 4*1024*1024)
 	sum := 0
@@ -64,6 +66,7 @@ func TestEmpty(t *testing.T) {
 	}
 }
 
+// Test from the Wikipedia page on Adler32
 func TestWikipedia(t *testing.T) {
 	expected := uint32(0x11E60398);
 	teststr := "Wikipedia";
