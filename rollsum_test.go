@@ -1,3 +1,7 @@
+// rollsum_test.go, tests the rollsum.go library
+// Copyright (C) 2013  Greg Baker
+// GPLv2, see LICENSE.txt
+
 package rollsum
 
 import "testing"

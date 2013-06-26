@@ -1,6 +1,25 @@
+// rollsum, a library to implement a rolling adler32 checksum.
+// Copyright (C) 2013  Greg Baker
+
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License along
+// with this program; if not, write to the Free Software Foundation, Inc.,
+// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+// This code heavily copies code (in good faith) by the Go Authors.
 // Copyright 2009 The Go Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// Use of the adler32 source code is governed by a BSD
+// style license that can be found in the 
+// LICENSE.adler32.txt file
 
 // Package adler32 implements the Adler-32 checksum.
 //
@@ -101,3 +120,4 @@ func (d *Rollsum) Sum(in []byte) []byte {
 // Checksum returns the Adler-32 checksum of data.
 func Checksum(data []byte) uint32 { return adler32.Checksum(data) }
 
+// I hate lawyers
